@@ -1,0 +1,231 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e272e;
+    color: #ffffff;
+    margin: 0;
+    height: 100vh;
+    background-image: url('https://example.com/seace-background.jpg'); /* Cambia el URL por una imagen de fondo que evoque al SEACE */
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    color: #ff793f;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #2f3542;
+}
+
+/* Contenedores */
+.player-inputs,
+.question-container,
+.board,
+#winnerMessage {
+    max-width: 500px;
+    width: 90%;
+    background-color: rgba(47, 53, 66, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.player-inputs label,
+.question-container h2 {
+    font-weight: bold;
+    color: #ffda79;
+}
+
+.question-container,
+#winnerMessage {
+    text-align: center;
+}
+
+/* Input de jugadores y botón */
+.player-inputs label {
+    display: block;
+    margin: 5px 0 3px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffda79;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    color: #2f3542;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #ff793f;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #ff6b3a;
+}
+
+/* Pregunta y opciones */
+.question-container h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #2f3542;
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffda79;
+    border: none;
+    border-radius: 8px;
+    color: #2f3542;
+    font-weight: bold;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#options button:hover {
+    background-color: #ffd34a;
+}
+
+/* Tablero de Michi */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #57606f;
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.cell:hover {
+    background-color: #747d8c;
+    transform: scale(1.08);
+}
+
+/* Mensajes de respuesta */
+.correct-answer {
+    color: #2ed573;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.incorrect-answer {
+    color: #ff4757;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Mensaje del ganador */
+#winnerMessage {
+    display: none;
+    text-align: center;
+    background-color: rgba(30, 39, 46, 0.9);
+    border: 2px solid #ff793f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#winnerMessage h2 {
+    color: #ffda79;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.prize-image {
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+/* Imagen del premio en el mensaje de ganador */
+.prize-image {
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+/* Estilos para las celdas del tablero */
+.cell {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    font-size: 36px;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cell.X {
+    color: red; /* Color rojo para la X */
+}
+
+.cell.O {
+    color: blue; /* Color azul para el O */
+}
+/* Sección de puntajes */
+#scoreboard {
+    margin-top: 20px;
+}
+
+/* Imagen del premio en el mensaje de ganador */
+.prize-image {
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón de reinicio de juego */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
