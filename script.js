@@ -315,7 +315,7 @@ let prizes = [
     { name: "Chocolate", image: "images/chocolate.png" },
     { name: "Dulce", image: "images/dulce.jpg" },
     { name: "Fruta", image: "images/fruta.jpg" },
-    { name: "Pastel", image: "images/pastel.jpg" }
+    { name: "Pastel", image: "images/pastel.jpeg" }
 ];
 
 // Inicia el juego con los nombres de los jugadores
